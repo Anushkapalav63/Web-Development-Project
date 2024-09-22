@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="checkoutpage.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light ps-1">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="homepage-profile.html">
+          <img src="Logo.png" alt="Logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="homepage-profile.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="coursedetails.html"
+                style="color: #e25319; font-weight: 600"
+                >Courses</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Membership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogpage.html">Blog</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li> -->
+          </ul>
+          <div class="profile-container d-none d-md-none d-lg-none d-xl-block">
+            <img src="profile image.png" alt="Profile Picture" width="70%" />
+            <span class="name">Anushka</span>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </nav>
+    <div
+      class="container-fluid"
+      style="margin-top: 1%; font-family: poppins, sans-serif"
+    >
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="rectangle1">
+              <div class="checkout">Checkout</div>
+              <div class="carttype">Cart Type</div>
+              <div class="col-12" style="padding-left: 5%">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="paypal.png" alt="" />
+                  </div>
+                  <div class="col-2">
+                    <img src="american express.png" alt="" />
+                  </div>
+                  <div class="col-2">
+                    <img src="visa.png" alt="" />
+                  </div>
+                  <div class="col-2">
+                    <img src="master card.png" alt="" />
+                  </div>
+                  <form action="checkoutpage.php" method="post">
+                    <p class="namecard">Name on Card</p>
+                    <input
+                      type="text"
+                      style="padding-inline-start: 10px"
+                      class="nameoncard"
+                      id="nameoncard"
+                      name="nameoncard"
+                      placeholder="Enter Name on Card"
+                    />
+                    <p class="cardno">Card Number</p>
+                    <input
+                      type="text"
+                      style="padding-inline-start: 10px"
+                      class="cardnumber"
+                      id="cardnumber"
+                      name="cardnumber"
+                      placeholder="Enter Card Number"
+                    />
+
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="expiry" style="padding-top: 10px">
+                            Expiration Date
+                          </p>
+                          <input
+                            type="text"
+                            style="padding-inline-start: 10px"
+                            class="expirationdate"
+                            id="expirationdate"
+                            name="expirationdate"
+                            placeholder="Enter Expiration Date"
+                          />
+                        </div>
+                        <div class="col-6">
+                          <p class="cvc" style="padding-top: 10px">CVC</p>
+                          <input
+                            type="password"
+                            style="padding-inline-start: 10px"
+                            class="expirationdate"
+                            id="cvc"
+                            name="cvc"
+                            placeholder="Enter CVC"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="checkbox">
+                      <input type="checkbox" /><label for="checkbox"
+                        >Save my Information for faster Checkout</label
+                      >
+                    </div>
+                    <div>
+                      <button
+                        class="submitbutton"
+                        onclick="successPage('Your Purchase was Successful !')"
+                      >
+                        Confirm Payment
+                      </button>
+                    </div>
+                  </form>
+                  <div class="col-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="rectangle2">
+              <div class="summary">Summary</div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-3">
+                    <a href="coursedetails.html"
+                      ><img src="summary1.png" class="summary1" alt=""
+                    /></a>
+                  </div>
+                  <div class="col-9">
+                    <p class="summary1title">
+                      <a href="coursedetails.html">
+                        The Complete 2024 Web Development Bootcamp</a
+                      >
+                    </p>
+                    <p class="cost1">$79</p>
+                  </div>
+                  <hr style="width: 85%; margin-left: 7%" />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-3">
+                    <img src="summary2.png" class="summary2" alt="" />
+                  </div>
+                  <div class="col-9">
+                    <p class="summary2title">
+                      Java 17 Masterclass: Start Coding in 2024
+                    </p>
+                    <p class="cost2">$49</p>
+                  </div>
+                  <hr style="width: 85%; margin-left: 7%" />
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-5">Subtotal</div>
+                  <div class="col-4">$128</div>
+                </div>
+                <hr style="width: 89%; margin-left: 5%" />
+                <div class="row">
+                  <div class="col-5">Coupon Discount</div>
+                  <div class="col-4">0%</div>
+                </div>
+                <hr style="width: 89%; margin-left: 5%" />
+                <div class="row">
+                  <div class="col-5">Tax</div>
+                  <div class="col-4">5%</div>
+                </div>
+                <hr style="width: 89%; margin-left: 5%" />
+                <div class="row">
+                  <div class="col-5" style="color: black">Total</div>
+                  <div class="col-4" style="color: black">$130</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid1" style="font-family: poppins, sans-serif">
+      <div class="recommendedcourses">Recommended for you</div>
+
+      <div class="container">
+        <div class="col-md-12" style="margin-top: 3%">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="rectangle13">
+                <img
+                  src="rec1.png"
+                  style="width: 95%; padding-left: 5%; padding-top: 5%"
+                  alt=""
+                />
+                <p
+                  style="
+                    font-size: 18px;
+                    margin-top: 7%;
+                    margin-left: 5%;
+                    font-weight: 600;
+                    margin-right: 5%;
+                  "
+                >
+                  HTML and CSS for Beginners
+                </p>
+                <p style="font-size: 16px; margin-left: 5%; margin-right: 10%">
+                  HTML and CSS for Beginners course will give your all the
+                  knowledge you need to master HTML and CSS.
+                </p>
+                <p
+                  style="
+                    margin-left: 5%;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #e25319;
+                    padding-bottom: 7%;
+                  "
+                >
+                  $49
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="rectangle13">
+                <img
+                  src="rec2.png"
+                  style="width: 95%; padding-left: 5%; padding-top: 5%"
+                  alt=""
+                />
+                <p
+                  style="
+                    font-size: 18px;
+                    margin-top: 7%;
+                    margin-left: 5%;
+                    font-weight: 600;
+                    margin-right: 5%;
+                  "
+                >
+                  Java 17 Masterclass: Start Coding in 2024
+                </p>
+                <p style="font-size: 16px; margin-left: 5%; margin-right: 10%">
+                  Acquire Key Java Skills: From Basics to Advanced Programming
+                  Certification - Start Your Dev career
+                </p>
+                <p
+                  style="
+                    margin-left: 5%;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #e25319;
+                    padding-bottom: 7%;
+                  "
+                >
+                  $89
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="rectangle13">
+                <img
+                  src="rec3.png"
+                  style="width: 95%; padding-left: 5%; padding-top: 5%"
+                  alt=""
+                />
+                <p
+                  style="
+                    font-size: 18px;
+                    margin-top: 7%;
+                    margin-left: 5%;
+                    font-weight: 600;
+                    margin-right: 5%;
+                  "
+                >
+                  The Ultimate Web Development Odyssey
+                </p>
+                <p style="font-size: 16px; margin-left: 5%; margin-right: 10%">
+                  Become a Full-Stack Web Developer with just ONE course. HTML,
+                  CSS, Javascript, Node, React
+                </p>
+                <p
+                  style="
+                    margin-left: 5%;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #e25319;
+                    padding-bottom: 7%;
+                  "
+                >
+                  $79
+                </p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="rectangle13">
+                <img
+                  src="rec4.png"
+                  style="width: 95%; padding-left: 5%; padding-top: 5%"
+                  alt=""
+                />
+                <p
+                  style="
+                    font-size: 18px;
+                    margin-top: 7%;
+                    margin-left: 5%;
+                    font-weight: 600;
+                    margin-right: 5%;
+                  "
+                >
+                  Angular & NodeJS - The MEAN Stack Guide
+                </p>
+                <p style="font-size: 16px; margin-left: 5%; margin-right: 10%">
+                  Learn how to connect your Angular Frontend to a NodeJS by
+                  building a real Application
+                </p>
+                <p
+                  style="
+                    margin-left: 5%;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #e25319;
+                    padding-bottom: 7%;
+                  "
+                >
+                  $89
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#"><button class="top" id="top">^</button></a>
+      </div>
+    </div>
+
+    <footer class="footer" style="font-family: poppins, sans-serif">
+      <a href="#" class="whitelogo">
+        <img src="whitelogo.png" alt="whitelogo" width="auto" height="auto" />
+      </a>
+      <div class="vertical"></div>
+      <div class="zoomclass1">Virtual Class</div>
+      <div class="zoomclass2">for Zoom</div>
+      <br />
+      <div class="newsletter">Subscribe to get our Newsletter</div>
+      <form action="#" method="post">
+        <input
+          type="text"
+          style="padding-inline-start: 20px"
+          class="mail"
+          id="mail"
+          name="mail"
+          placeholder="Your Email"
+        />
+        <button class="subscribe">
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            style="text-decoration: none"
+            >Subscribe</a
+          >
+        </button>
+        <div class="terms">
+          <div class="link">
+            <a href="">Careers</a> | <a href="">Privacy Policy</a> |
+            <a href="">Terms & Conditions</a>
+          </div>
+        </div>
+        <p class="copy">&copy 2024</p>
+      </form>
+    </footer>
+
+    <script>
+      function successPage(msg) {
+        alert(msg);
+      }
+    </script>
+  </body>
+</html>
